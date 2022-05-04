@@ -5,18 +5,38 @@
         <style>
             h1 {
                 text-align: center;
-                margin-top: 4%;
+                margin-top: 2%;
+                font-family: Arial, Helvetica, sans-serif;
             }
+            body {
+                background-color: rgba(249, 231, 69, 0.312);
+            }
+
+            #prof {
+                border-color: black;
+                border-width: 2px;
+                border-style: solid;
+            }
+            #indhold {
+                margin-top: 4%;
+                margin-left: auto;
+                margin-right: auto;
+                width: 300px;
+            }
+            
         </style>
     </head>
     <body>
-        <h1>Indlæggelsesprofil</h1>
-
+        <div id="prof">
+            <h1>Indlæggelsesprofil</h1>
+        </div>
+        <div id="indhold">
         <p>Brugernavn</p>
         <input id="brugernavn" type="text">
         <p>Kodeord</p>
         <input id="kodeord" type="text">
         <button onclick="log_in()" >Log Ind</button>
+        </div>
     </body>
     <script>
         function log_in()
