@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Indlæggelsesprofil</title>
+        <meta charset="UTF-8">
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 4%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Indlæggelsesprofil</h1>
+
+        <p>Brugernavn</p>
+        <input id="brugernavn" type="text">
+        <p>Kodeord</p>
+        <input id="kodeord" type="text">
+        <button onclick="log_in()" >Log Ind</button>
+    </body>
+    <script>
+        function log_in()
+        {
+            user = document.getElementById('brugernavn').value;
+            pass = document.getElementById('kodeord').value;
+            adgang_user = ["læge", "syge", "fys", "bio"]
+            user = user.toString().toLowerCase();
+            pass = pass.toString().toLowerCase();
+            if (adgang_user.includes(user))
+            {
+                if (pass == "admin"){
+                    window.location.href="indhold.html";
+                }
+                else
+                {
+                    function myFunction() 
+                    {
+                        confirm("Kodeordet er forkert");
+                        
+                    }
+                }
+            }
+            else
+            {
+                function myFunction() 
+                    {
+                        confirm("Brugernavnet er forkert");
+                    }
+            }
+
+        }
+    </script>
+</html>
